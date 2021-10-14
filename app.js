@@ -29,6 +29,8 @@ var journal_query_form = require('./routes/journal_query_form');
 var journal_query = require('./routes/journal_query');
 var member_remove_form = require('./routes/member_remove_form');
 var member_remove = require('./routes/member_remove');
+var bookshelf_remove_form = require('./routes/bookshelf_remove_form');
+var bookshelf_remove = require('./routes/bookshelf_remove');
 //------------------------------------------------------------
 
 var app = express();
@@ -71,6 +73,8 @@ app.use('/journal/query/form', journal_query_form);
 app.use('/journal/query',journal_query);
 app.use('/member/remove/form', member_remove_form);
 app.use('/member/remove', member_remove);
+app.use('/bookshelf/remove/form', bookshelf_remove_form);
+app.use('/bookshelf/remove', bookshelf_remove);
 
 //-----------------------------------------
 
