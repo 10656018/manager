@@ -81,6 +81,11 @@ router.get('/bookshelf_remove_form', function(req, res, next) {
   res.render('bookshelf_remove_form', { title: 'bookshelf_remove_form' });
 });
 
+
+router.get('/journal_remove_form', function(req, res, next) {
+  res.render('journal_remove_form', { title: 'journal_remove_form' });
+});
+
 router.get('/material_add_form', function(req, res, next) {
   res.render('material_add_form', { title: 'material_add_form' });
 });

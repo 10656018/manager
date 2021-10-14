@@ -31,6 +31,8 @@ var member_remove_form = require('./routes/member_remove_form');
 var member_remove = require('./routes/member_remove');
 var bookshelf_remove_form = require('./routes/bookshelf_remove_form');
 var bookshelf_remove = require('./routes/bookshelf_remove');
+var journal_remove_form = require('./routes/journal_remove_form');
+var journal_remove = require('./routes/journal_remove');
 //------------------------------------------------------------
 
 var app = express();
@@ -75,6 +77,8 @@ app.use('/member/remove/form', member_remove_form);
 app.use('/member/remove', member_remove);
 app.use('/bookshelf/remove/form', bookshelf_remove_form);
 app.use('/bookshelf/remove', bookshelf_remove);
+app.use('/journal/remove/form', journal_remove_form);
+app.use('/journal/remove', journal_remove);
 
 //-----------------------------------------
 
