@@ -90,6 +90,10 @@ router.get('/material_add_form', function(req, res, next) {
   res.render('material_add_form', { title: 'material_add_form' });
 });
 
+router.get('/material_remove_form', function(req, res, next) {
+  res.render('material_remove_form', { title: 'material_remove_form' });
+});
+
 module.exports = router;
 
 
