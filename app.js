@@ -33,6 +33,8 @@ var bookshelf_remove_form = require('./routes/bookshelf_remove_form');
 var bookshelf_remove = require('./routes/bookshelf_remove');
 var journal_remove_form = require('./routes/journal_remove_form');
 var journal_remove = require('./routes/journal_remove');
+var material_add_form = require('./routes/material_add_form');
+var material_add = require('./routes/material_add');
 //------------------------------------------------------------
 
 var app = express();
@@ -79,8 +81,17 @@ app.use('/bookshelf/remove/form', bookshelf_remove_form);
 app.use('/bookshelf/remove', bookshelf_remove);
 app.use('/journal/remove/form', journal_remove_form);
 app.use('/journal/remove', journal_remove);
+app.use('/materialproduct/add/form', material_add_form);
+app.use('/material/add', material_add);
+
 
 //-----------------------------------------
+//----------------------------------------
+// 可由外部直接取用資料夾
+//----------------------------------------
+app.use(express.static('public/picture'));
+//-----------------------------------------
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -94,6 +94,14 @@ router.get('/material_remove_form', function(req, res, next) {
   res.render('material_remove_form', { title: 'material_remove_form' });
 });
 
+router.get('/addmaterialSuccess', function(req, res, next) {
+  res.render('addmaterialSuccess', { title: 'addmaterialSuccess' });
+});
+
+router.get('/addmaterialFail', function(req, res, next) {
+  res.render('addmaterialFail', { title: 'addmaterialFail' });
+});
+
 module.exports = router;
 
 
