@@ -35,6 +35,8 @@ var journal_remove_form = require('./routes/journal_remove_form');
 var journal_remove = require('./routes/journal_remove');
 var material_add_form = require('./routes/material_add_form');
 var material_add = require('./routes/material_add');
+var material_query_form = require('./routes/material_query_form');
+var material_query = require('./routes/material_query');
 //------------------------------------------------------------
 
 var app = express();
@@ -83,7 +85,8 @@ app.use('/journal/remove/form', journal_remove_form);
 app.use('/journal/remove', journal_remove);
 app.use('/materialproduct/add/form', material_add_form);
 app.use('/material/add', material_add);
-
+app.use('/material/query/form', material_query_form);
+app.use('/material/query',material_query);
 
 //-----------------------------------------
 //----------------------------------------

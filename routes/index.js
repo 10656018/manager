@@ -102,6 +102,13 @@ router.get('/addmaterialFail', function(req, res, next) {
   res.render('addmaterialFail', { title: 'addmaterialFail' });
 });
 
+router.get('/material_query_form', function(req, res, next) {
+  res.render('material_query_form', { title: 'material_query_form' });
+});
+
+router.get('/material_query', function(req, res, next) {
+  res.render('material_query', { title: 'material_query' });
+});
 module.exports = router;
 
 

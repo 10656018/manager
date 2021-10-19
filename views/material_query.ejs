@@ -47,7 +47,6 @@
 					<a href="#">素材管理</a>
 					<ul>
 						<li><a href="/material_add_form">新增素材</a></li>
-						
 						<li><a href="/material_query_form">查詢素材</a></li>
 						<li><a href="/material_remove_form">刪除素材</a></li>
 					</ul>
@@ -55,7 +54,8 @@
 				<li>
 					<a href="#">書櫃</a>
 					<ul>
-						<li><a href="/bookshelf_query_form">書櫃查詢</a></li>						
+						<li><a href="/bookshelf_query_form">書櫃查詢</a></li>			
+						<li><a href="/bookshelf_remove_form">書櫃刪除</a></li>					
 					</ul>
 				</li>
 				<!-- <li><a href="/sign_in">登入</a></li> -->
@@ -63,18 +63,38 @@
 				
 		</nav>
 		<!-- Banner -->
-						<h2>書櫃刪除</h2>
+		<br>
+		<div class="box-user">
+			<span class="line"></span>
+			<span class="text">
+				<div class="send-message">
+					<div class="section-heading">
+                                     <h2>素材資料</h2>                           
 
-				<form action = "/bookshelf/remove" method = "post">
-					<div class="form">
-						<span class="name">書櫃編號: </span>
-						<span class="value"><input type="text" name="bsfno" maxlength=""></span>
-						<br/>    
-										
-						<span class="name"></span>
-						<span class="value"><input type="submit" value="刪除" ></span>    
-					</div>    
-				</form>    
+                                        <table>
+                                            <tr>
+                                                <td width="25%">素材編號</td>
+                                                <td><%= item.matno %></td>
+                                            </tr>
+                                            <tr>
+                                                <td>素材名稱</td>
+                                                <td><%= item.matname %></td>
+                                            </tr>
+                                            <tr>
+                                                <td>素材</td>
+                                                <td><img src='<%= item.material %>'></td>
+                                            </tr>                                                                                                                               
+                                        </table> 
+									</form>								
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+		</span>
+	</div>
+					</div>
+
 					<!--navbar外掛-->
 					
 					<script src="/js/jquery.min.js"></script>

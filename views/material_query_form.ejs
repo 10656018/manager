@@ -55,7 +55,8 @@
 				<li>
 					<a href="#">書櫃</a>
 					<ul>
-						<li><a href="/bookshelf_query_form">書櫃查詢</a></li>						
+						<li><a href="/bookshelf_query_form">書櫃查詢</a></li>	
+						<li><a href="/bookshelf_remove_form">書櫃刪除</a></li>				
 					</ul>
 				</li>
 				<!-- <li><a href="/sign_in">登入</a></li> -->
@@ -63,16 +64,16 @@
 				
 		</nav>
 		<!-- Banner -->
-						<h2>書櫃刪除</h2>
+						<h2>素材查詢</h2>
 
-				<form action = "/bookshelf/remove" method = "post">
+				<form action = "/material/query" method = "get">
 					<div class="form">
-						<span class="name">書櫃編號: </span>
-						<span class="value"><input type="text" name="bsfno" maxlength=""></span>
+						<span class="name">素材編號: </span>
+						<span class="value"><input type="text" name="matno" maxlength=""></span>
 						<br/>    
 										
 						<span class="name"></span>
-						<span class="value"><input type="submit" value="刪除" ></span>    
+						<span class="value"><input type="submit" value="查詢" ></span>    
 					</div>    
 				</form>    
 					<!--navbar外掛-->
