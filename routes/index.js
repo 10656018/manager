@@ -109,6 +109,10 @@ router.get('/material_query_form', function(req, res, next) {
 router.get('/material_query', function(req, res, next) {
   res.render('material_query', { title: 'material_query' });
 });
+
+router.get('/material_remove_form', function(req, res, next) {
+  res.render('material_remove_form', { title: 'material_remove_form' });
+});
 module.exports = router;
 
 

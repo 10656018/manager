@@ -37,6 +37,8 @@ var material_add_form = require('./routes/material_add_form');
 var material_add = require('./routes/material_add');
 var material_query_form = require('./routes/material_query_form');
 var material_query = require('./routes/material_query');
+var material_remove_form = require('./routes/material_remove_form');
+var material_remove= require('./routes/material_remove');
 //------------------------------------------------------------
 
 var app = express();
@@ -87,7 +89,8 @@ app.use('/materialproduct/add/form', material_add_form);
 app.use('/material/add', material_add);
 app.use('/material/query/form', material_query_form);
 app.use('/material/query',material_query);
-
+app.use('/material/remove/form', material_remove_form);
+app.use('/material/remove', material_remove);
 //-----------------------------------------
 //----------------------------------------
 // 可由外部直接取用資料夾
