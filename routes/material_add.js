@@ -21,7 +21,7 @@ var storage = multer.diskStorage({
 })
 
 // 產生multer的上傳物件
-var maxSize=1024*1024;  //設定最大可接受圖片大小(1M)
+var maxSize=4096*4096;  //設定最大可接受圖片大小(1M)
 
 var upload = multer({
     storage:storage
@@ -29,16 +29,10 @@ var upload = multer({
 //---------------------------
 
 //接收POST請求
-router.post('/', upload.single('picture'), function(req, res, next) {
-    // 如果有選擇圖片
-    if (typeof req.file != 'undefined'){
-        // 傳入檔案不可超過maxSize
-        if(req.file.size > maxSize){
-            res.render('fileSizeError');  //圖片過大
-            return;
-        }                      
-    }  
-    debugger;
+router.post('/', upload.single('material'), function(req, res, next) {
+
+    var sign=0;
+    
 
     //var matno = req.body.matno;            //取得產品編號
     var matname = req.body.matname;        //取得產品名稱  
@@ -56,13 +50,28 @@ router.post('/', upload.single('picture'), function(req, res, next) {
     } 
     
     // 新增素材
-    mat.add(newData).then(d => {
+    mat.matadd(newData).then(d => {
         if (d==0){
             res.render('addmaterialSuccess');  //傳至成功頁面
         }else{
-            res.render('addmaterialFail');     //導向錯誤頁面
+            sign=1;
+            res.render('addmaterialFail');     //導向錯誤頁面\
         }  
     })
+
+    if(sign===1){
+        return;
+    }
+
+    // 如果有選擇圖片
+    if (typeof req.file != 'undefined'){
+        // 傳入檔案不可超過maxSize
+        if(req.file.size > maxSize){
+            res.render('fileSizeError');  //圖片過大
+            return;
+        }                      
+    }  
+    
 });
 
 module.exports = router;

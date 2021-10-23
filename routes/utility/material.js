@@ -8,7 +8,7 @@ const sql = require('./asyncDB');
 //------------------------------------------
 // 新增商品
 //------------------------------------------
-var add = async function(newData){
+var matadd = async function(newData){
     var result;
 
     await sql('INSERT INTO material (matname, material) VALUES ($1, $2)', [newData.matname, newData.material])
@@ -22,4 +22,4 @@ var add = async function(newData){
 }
 
 //匯出
-module.exports = {add};
+module.exports = {matadd};
