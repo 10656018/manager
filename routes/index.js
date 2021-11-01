@@ -113,6 +113,10 @@ router.get('/material_query', function(req, res, next) {
 router.get('/material_remove_form', function(req, res, next) {
   res.render('material_remove_form', { title: 'material_remove_form' });
 });
+
+router.get('/manager_remove_form', function(req, res, next) {
+  res.render('manager_remove_form', { title: 'manager_remove_form' });
+});
 module.exports = router;
 
 
